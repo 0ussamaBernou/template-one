@@ -1,0 +1,153 @@
+/******************************************
+/* Variables
+/*******************************************/
+
+:root {
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Box Model Hack */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* Container base style */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Start Header */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.logo {
+  width: 60px;
+}
+.links {
+  position: relative;
+}
+.links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+  width: 100%;
+}
+.icon span:nth-child(2) {
+  height: 2px;
+  width: 60%;
+  transition: all 0.3s;
+}
+/* icon animation on hover */
+.links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.links ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  background-color: #f6f6f6;
+  padding: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+}
+.links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  right: 5px;
+  top: -20px;
+  position: absolute;
+}
+.links:hover ul {
+  display: block;
+}
+.links ul a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+.links ul a:hover {
+  padding-left: 25px;
+}
+/* End Header */
+
+footer {
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/******************************************
+/* Media Queries
+/*******************************************/
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
