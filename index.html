@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Leon Landing page" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Your description goes here" />
-	<meta name="keywords" content="one, two, three" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Leon's website</title>
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	<title>Blank Template</title>
+    <!-- external CSS link -->
 
-	<!-- external JavaScript -->
-	<script type="text/javascript" src="js/main.js" defer></script>
+    <!-- normalizes styling for all browsers -->
+    <link rel="stylesheet" href="css/normalize.css" />
 
-	<!-- external CSS link -->
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css" />
 
-	<!-- normalizes styling for all browsers -->
-	<link rel="stylesheet" href="css/normalize.css" />
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="./css/all.min.css" />
 
-	<!-- css link -->
-	<link rel="stylesheet" href="css/style.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- fontawesome css link -->
-	<link rel="stylesheet" href="./css/all.min.css" />
+    <!-- external JavaScript -->
+    <script type="text/javascript" src="js/main.js" defer></script>
+  </head>
 
-	<!-- Google font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <!-- START HEADER -->
+    <header class="header">
+      <div class="container nav">
+        <img class="logo" src="./images/logo.png" alt="logo" />
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="#services">services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
 
-<body>
-	<header class="header">
-		<div class="container nav">
-			<img class="logo" src="./images/logo.png" alt="logo">
-			<div class="links">
-				<span class="icon">
-					<span></span>
-					<span></span>
-					<span></span>
-				</span>
-				<ul>
-					<li><a href="#services">services</a></li>
-					<li><a href="#portfolio">portfolio</a></li>
-					<li><a href="#about">about</a></li>
-					<li><a href="#contact">contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</header>
-</body>
-
+    <!-- START LANDING -->
+    <div class="landing">
+      <!-- START MAIN -->
+      <main class="main">
+        <div class="container main-content">
+          <h1 class="heading-1">Hello There!</h1>
+          <p class="p">
+            We are Leon - super creative & minimal
+            <br />
+            Agency web template
+          </p>
+        </div>
+      </main>
+      <!-- END MAIN -->
+      <section class="features">
+        <div class="container">
+          <div class="feature">
+            <span class="fas fa-magic fa-4x"></span>
+            <h3 class="heading-3">Feature</h3>
+            <p class="p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              fuga odit explicabo deleniti molestiae necessitatibus neque, id
+              repudiandae animi aspernatur.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="fas fa-mobile fa-4x"></span>
+            <h3 class="heading-3">Feature</h3>
+            <p class="p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              fuga odit explicabo deleniti molestiae necessitatibus neque, id
+              repudiandae animi aspernatur.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="fas fa-laptop fa-4x"></span>
+            <h3 class="heading-3">Feature</h3>
+            <p class="p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              fuga odit explicabo deleniti molestiae necessitatibus neque, id
+              repudiandae animi aspernatur.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END LANDING -->
+  </body>
 </html>

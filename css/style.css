@@ -3,6 +3,11 @@
 /*******************************************/
 
 :root {
+  --light-gray: #f6f6f6;
+  --teal: #12c9b5;
+  --blue-gray: #2b4657;
+  --white: #ffffff;
+  --section-padding: 60px;
 }
 
 /******************************************
@@ -36,15 +41,17 @@
 html {
   scroll-behavior: smooth;
   font-family: "Work Sans", sans-serif;
+  font-size: 62.5%;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+
 /* Container base style */
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,7 +62,8 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .logo {
   width: 60px;
@@ -64,19 +72,18 @@ html {
   position: relative;
 }
 .links .icon {
-  width: 30px;
+  width: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 .icon span {
-  background-color: #333;
+  background-color: var(--blue-gray);
   margin-bottom: 5px;
-  height: 2px;
+  height: 1px;
   width: 100%;
 }
 .icon span:nth-child(2) {
-  height: 2px;
   width: 60%;
   transition: all 0.3s;
 }
@@ -89,17 +96,19 @@ html {
   position: absolute;
   right: 0;
   margin: 0;
-  background-color: #f6f6f6;
+  background-color: var(--blue-gray);
   padding: 0;
   min-width: 200px;
   top: calc(100% + 15px);
   display: none;
+  box-shadow: 5px -5px 10px 1px rgba(255, 255, 255, 0.7);
+  z-index: 1;
 }
 .links ul::before {
   content: "";
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent #f6f6f6 transparent;
+  border-color: transparent transparent var(--blue-gray) transparent;
   right: 5px;
   top: -20px;
   position: absolute;
@@ -108,10 +117,13 @@ html {
   display: block;
 }
 .links ul a {
+  /* typography */
   text-decoration: none;
-  color: #333;
+  color: white;
   display: block;
   padding: 15px;
+  font-size: 1.5rem;
+  /* other */
   transition: all 0.3s;
 }
 .links ul li:not(:last-child) a {
@@ -122,8 +134,79 @@ html {
 }
 /* End Header */
 
-footer {
+/* START MAIN */
+.main {
+  background: var(--light-gray);
+
+  /* positioning  */
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.main-content {
+  /* positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading-1 {
+  /* typography */
+  color: var(--teal);
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.p {
+  /* typography */
+  color: var(--blue-gray);
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/* END MAIN */
+
+/* START features */
+.features {
+  background-color: var(--white);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit /* or auto-fill */,
+    minmax(300px, 1fr)
+  );
+  gap: 20px;
+}
+.feature span {
+  color: var(--teal);
+}
+.feature {
+  text-align: center;
+  padding: 0 50px;
+  padding-top: 20px;
+  border-radius: 5px;
+
+  transition: all ease-out 0.2s;
+  cursor: default;
+}
+.heading-3 {
+  color: var(--blue-gray);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.feature .p {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.feature:hover {
+  box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* END features */
 
 /******************************************
 /* ADDITIONAL STYLES
